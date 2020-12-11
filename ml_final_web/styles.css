@@ -1,0 +1,50 @@
+svg {
+    font: 12px sans-serif;
+    text-anchor: middle;
+    float: left;
+  }
+  
+  rect {
+    stroke: lightgray;
+    fill: none;
+  }
+  
+  .y.axis path{
+    fill: none;
+    stroke: none;
+  }
+
+  .nodes circle {
+    cursor: pointer;
+
+}
+
+.links line {
+    fill: none;
+    stroke: black; /*#9ecae1;*/
+    stroke-width: .5px;
+}
+
+.disp {
+    float: right;
+    padding-right: 9px;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.link {
+    fill: none;
+    stroke: #000;
+    stroke-opacity: .2;
+  }
+.link:hover {
+    stroke-opacity: .5;
+}
+
+ul{
+    list-style-type:none;
+}

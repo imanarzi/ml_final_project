@@ -1,0 +1,377 @@
+{
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+        {
+            "name": "R0",
+            "id": "R0"
+        },
+        {
+            "name": "budget-resolution",
+            "id": "budget-resolution"
+        },
+        {
+            "name": "anti-sat-ban",
+            "id": "anti-sat-ban"
+        },
+        {
+            "name": "R1",
+            "id": "R1"
+        },
+        {
+            "name": "R2",
+            "id": "R2"
+        },
+        {
+            "name": "nicaraguan-contras",
+            "id": "nicaraguan-contras"
+        },
+        {
+            "name": "R3",
+            "id": "R3"
+        },
+        {
+            "name": "R4",
+            "id": "R4"
+        },
+        {
+            "name": "mx-missile",
+            "id": "mx-missile"
+        },
+        {
+            "name": "R5",
+            "id": "R5"
+        },
+        {
+            "name": "R6",
+            "id": "R6"
+        },
+        {
+            "name": "democrat",
+            "id": "democrat"
+        },
+        {
+            "name": "R7",
+            "id": "R7"
+        },
+        {
+            "name": "R8",
+            "id": "R8"
+        },
+        {
+            "name": "no-physician-fee-freeze",
+            "id": "no-physician-fee-freeze"
+        },
+        {
+            "name": "R9",
+            "id": "R9"
+        },
+        {
+            "name": "R10",
+            "id": "R10"
+        },
+        {
+            "name": "no-el-salvador-aid",
+            "id": "no-el-salvador-aid"
+        },
+        {
+            "name": "R11",
+            "id": "R11"
+        },
+        {
+            "name": "R12",
+            "id": "R12"
+        },
+        {
+            "name": "no-education-spending",
+            "id": "no-education-spending"
+        },
+        {
+            "name": "R13",
+            "id": "R13"
+        },
+        {
+            "name": "R14",
+            "id": "R14"
+        },
+        {
+            "name": "religion-in-schools",
+            "id": "religion-in-schools"
+        },
+        {
+            "name": "el-salvador-aid",
+            "id": "el-salvador-aid"
+        },
+        {
+            "name": "R15",
+            "id": "R15"
+        },
+        {
+            "name": "R16",
+            "id": "R16"
+        },
+        {
+            "name": "crime",
+            "id": "crime"
+        },
+        {
+            "name": "R17",
+            "id": "R17"
+        },
+        {
+            "name": "R18",
+            "id": "R18"
+        },
+        {
+            "name": "no-mx-missile",
+            "id": "no-mx-missile"
+        },
+        {
+            "name": "R19",
+            "id": "R19"
+        }
+    ],
+    "links": [
+        {
+            "color": 0.38734905831306976,
+            "weight": 2,
+            "source": "R0",
+            "target": "anti-sat-ban"
+        },
+        {
+            "color": 0.38734905831306976,
+            "weight": 2,
+            "source": "budget-resolution",
+            "target": "R0"
+        },
+        {
+            "color": 0.19884726549723508,
+            "weight": 2,
+            "source": "budget-resolution",
+            "target": "R2"
+        },
+        {
+            "color": 0.3627873666005027,
+            "weight": 2,
+            "source": "budget-resolution",
+            "target": "R4"
+        },
+        {
+            "color": 0.8575409707605782,
+            "weight": 2,
+            "source": "budget-resolution",
+            "target": "R6"
+        },
+        {
+            "color": 0.3059563864772077,
+            "weight": 2,
+            "source": "budget-resolution",
+            "target": "R8"
+        },
+        {
+            "color": 0.285666151439284,
+            "weight": 2,
+            "source": "budget-resolution",
+            "target": "R10"
+        },
+        {
+            "color": 0.7638432306038914,
+            "weight": 2,
+            "source": "budget-resolution",
+            "target": "R12"
+        },
+        {
+            "color": 0.80432084727402,
+            "weight": 2,
+            "source": "anti-sat-ban",
+            "target": "R1"
+        },
+        {
+            "color": 0.80432084727402,
+            "weight": 2,
+            "source": "R1",
+            "target": "budget-resolution"
+        },
+        {
+            "color": 0.19884726549723508,
+            "weight": 2,
+            "source": "R2",
+            "target": "nicaraguan-contras"
+        },
+        {
+            "color": 0.5959869536432234,
+            "weight": 2,
+            "source": "nicaraguan-contras",
+            "target": "R3"
+        },
+        {
+            "color": 0.5959869536432234,
+            "weight": 2,
+            "source": "R3",
+            "target": "budget-resolution"
+        },
+        {
+            "color": 0.3627873666005027,
+            "weight": 2,
+            "source": "R4",
+            "target": "mx-missile"
+        },
+        {
+            "color": 0.5444803688315702,
+            "weight": 2,
+            "source": "mx-missile",
+            "target": "R5"
+        },
+        {
+            "color": 0.5444803688315702,
+            "weight": 2,
+            "source": "R5",
+            "target": "budget-resolution"
+        },
+        {
+            "color": 0.8575409707605782,
+            "weight": 2,
+            "source": "R6",
+            "target": "democrat"
+        },
+        {
+            "color": 0.8471672915412483,
+            "weight": 2,
+            "source": "democrat",
+            "target": "R7"
+        },
+        {
+            "color": 0.8471672915412483,
+            "weight": 2,
+            "source": "R7",
+            "target": "budget-resolution"
+        },
+        {
+            "color": 0.3059563864772077,
+            "weight": 2,
+            "source": "R8",
+            "target": "no-physician-fee-freeze"
+        },
+        {
+            "color": 0.43236494014571913,
+            "weight": 2,
+            "source": "no-physician-fee-freeze",
+            "target": "R9"
+        },
+        {
+            "color": 0.43236494014571913,
+            "weight": 2,
+            "source": "R9",
+            "target": "budget-resolution"
+        },
+        {
+            "color": 0.285666151439284,
+            "weight": 2,
+            "source": "R10",
+            "target": "no-el-salvador-aid"
+        },
+        {
+            "color": 0.6520481257541458,
+            "weight": 2,
+            "source": "no-el-salvador-aid",
+            "target": "R11"
+        },
+        {
+            "color": 0.6520481257541458,
+            "weight": 2,
+            "source": "R11",
+            "target": "budget-resolution"
+        },
+        {
+            "color": 0.7638432306038914,
+            "weight": 2,
+            "source": "R12",
+            "target": "no-education-spending"
+        },
+        {
+            "color": 0.747880117175698,
+            "weight": 2,
+            "source": "no-education-spending",
+            "target": "R13"
+        },
+        {
+            "color": 0.747880117175698,
+            "weight": 2,
+            "source": "R13",
+            "target": "budget-resolution"
+        },
+        {
+            "color": 0.589471322287202,
+            "weight": 2,
+            "source": "R14",
+            "target": "el-salvador-aid"
+        },
+        {
+            "color": 0.589471322287202,
+            "weight": 2,
+            "source": "religion-in-schools",
+            "target": "R14"
+        },
+        {
+            "color": 0.8740829322849509,
+            "weight": 2,
+            "source": "el-salvador-aid",
+            "target": "R15"
+        },
+        {
+            "color": 0.40594909284918457,
+            "weight": 2,
+            "source": "el-salvador-aid",
+            "target": "R17"
+        },
+        {
+            "color": 0.261386547727086,
+            "weight": 2,
+            "source": "el-salvador-aid",
+            "target": "R19"
+        },
+        {
+            "color": 0.8740829322849509,
+            "weight": 2,
+            "source": "R15",
+            "target": "religion-in-schools"
+        },
+        {
+            "color": 0.47765933509352554,
+            "weight": 2,
+            "source": "R16",
+            "target": "el-salvador-aid"
+        },
+        {
+            "color": 0.47765933509352554,
+            "weight": 2,
+            "source": "crime",
+            "target": "R16"
+        },
+        {
+            "color": 0.40594909284918457,
+            "weight": 2,
+            "source": "R17",
+            "target": "crime"
+        },
+        {
+            "color": 0.7118138686472947,
+            "weight": 2,
+            "source": "R18",
+            "target": "el-salvador-aid"
+        },
+        {
+            "color": 0.7118138686472947,
+            "weight": 2,
+            "source": "no-mx-missile",
+            "target": "R18"
+        },
+        {
+            "color": 0.261386547727086,
+            "weight": 2,
+            "source": "R19",
+            "target": "no-mx-missile"
+        }
+    ]
+}

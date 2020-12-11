@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <title>ML Visualization</title>
+    <script src="d3.v4.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="styles.css"/>
+    
+  </head>
+  <body onload="configDisp">
+    <h1>Voting Records Association Rules</h1>
+    <h3>Interactive Visualization</h3>
+    <div class="buttons">
+        <button onclick="showForce()">Force Diagram</button>
+        <button onclick="showCorr()">Correlogram</button>
+        <button onclick="showSankey()">Sankey Diagram </button>
+    </div>
+
+     <div class="fdiv">
+        <svg width="960" height="600" id="force"></svg>
+        <p id='rule'>
+            Click on a yellow node to see the corresponding rule.
+        </p>
+    </div>
+
+    <div id="corr" class="corr" style="display:none;">
+        <p>
+            Measures Support
+        </p>
+    </div>
+
+    <div id="sankey" class="sankey" style="display:none;"><p>
+        Hover over link to see support
+    </p></div>
+    
+    <div id="filter">
+        <p><strong>Filter:</strong></p>
+    </div>
+
+    <footer>
+        <hr>
+        &copy; Copyright 2020 Iman Anwarzai
+    </footer>
+    <script>
+        
+        function showForce(){
+            
+            var items = document.getElementsByClassName("sankey");
+            for (var i=0; i < items.length; i++) items[i].style.display = "none";
+            items = document.getElementsByClassName("corr");
+            for (var i=0; i < items.length; i++) items[i].style.display = "none";
+            items = document.getElementsByClassName("fdiv");
+            for (var i=0; i < items.length; i++) items[i].style.display = "block";
+            localStorage.setItem("currDisp", 0);
+
+        }
+        function showCorr(){
+            var items = document.getElementsByClassName("sankey");
+            for (var i=0; i < items.length; i++) items[i].style.display = "none";
+            items = document.getElementsByClassName("corr");
+            for (var i=0; i < items.length; i++) items[i].style.display = "block";
+            items = document.getElementsByClassName("fdiv");
+            for (var i=0; i < items.length; i++) items[i].style.display = "none";
+            localStorage.setItem("currDisp", 1);
+
+        }
+        function showSankey(){
+            var items = document.getElementsByClassName("sankey");
+            for (var i=0; i < items.length; i++) items[i].style.display = "block";
+            items = document.getElementsByClassName("corr");
+            for (var i=0; i < items.length; i++) items[i].style.display = "none";
+            items = document.getElementsByClassName("fdiv");
+            for (var i=0; i < items.length; i++) items[i].style.display = "none";
+            localStorage.setItem("currDisp", 2);
+        }
+        function configDisp(){
+            var currDisp = localStorage.getItem("currDisp")
+            if(!currDisp)
+                currDisp = 0;
+            
+            switch(currDisp){
+                case 0: showForce();
+                case 1: showCorr();
+                case 2: showSankey();
+            }
+        }
+    </script>
+    <script type="text/javascript" src="filters.js"></script>
+    <script type="text/javascript" src="force/force.js"></script>
+    <script type="text/javascript" src="corr/corr.js"></script>
+    <script type="text/javascript" src="sankey/sankey.js"></script>
+    <script type="text/javascript" src="sankey/script.js"></script> 
+  </body>
+</html>
