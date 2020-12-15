@@ -5,7 +5,7 @@ svg {
   }
   
   rect {
-    stroke: lightgray;
+    /*stroke: lightgray;*/
     fill: none;
   }
   
@@ -30,6 +30,12 @@ svg {
     padding-right: 9px;
 }
 
+.analysis{
+  clear: both;
+  margin-top: 4rem;
+  padding-top: 4rem;
+  width: 50%;
+}
 footer {
     clear: both;
     text-align: center;
@@ -48,3 +54,25 @@ footer {
 ul{
     list-style-type:none;
 }
+
+h1{
+  font-family: 'Trebuchet MS', sans-serif;
+  text-align: center;
+}
+
+body{
+  background-color: #f5ebf5;
+}
+
+.buttons button {
+  background-color: #0e4d40;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 12px;
+}
+

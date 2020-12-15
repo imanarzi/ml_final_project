@@ -28,11 +28,16 @@ function clicked(d){
         d3.json("force/rules.json", function(error, rules) {
             rdisp.innerHTML = rules.antecedents[id] + " ---> " + rules.consequents[id];
             rdisp.appendChild(document.createElement("br"));
+            rdisp.appendChild(document.createElement("br"));
             rdisp.appendChild(document.createTextNode("Support: "+ rules.support[id]));
             rdisp.appendChild(document.createElement("br"));
             rdisp.appendChild(document.createTextNode("Confidence: "+ rules.confidence[id]));
             rdisp.appendChild(document.createElement("br"));
             rdisp.appendChild(document.createTextNode("Lift: "+ rules.lift[id]));
+            rdisp.appendChild(document.createElement("br"));
+            rdisp.appendChild(document.createTextNode("Leverage: "+ rules.leverage[id]));
+            rdisp.appendChild(document.createElement("br"));
+            rdisp.appendChild(document.createTextNode("Conviction: "+ rules.conviction[id]));
         });
     }
     else{

@@ -11,13 +11,16 @@ function filterCorr(data, clist){
 d3.csv("corr/corr.csv", function(error, rows) {
     if(error) throw error;
     var data = [];
-
+    var max = 0;
+    var min = 1;
     rows.forEach(function(d) {
       var x = d[""];
       delete d[""];
       for (prop in d) {
         var y = prop,
           value = d[prop];
+        if(value > max) max = value;
+        if(value < min && value != 0) min = value;
         data.push({
           x: x,
           y: y,
@@ -25,9 +28,9 @@ d3.csv("corr/corr.csv", function(error, rows) {
         });
       }
     });
-    //console.log(data);
     data = (checked_list().length == 0) ? data : filterCorr(data, checked_list());
-    
+    console.log(max);
+
     var margin = {
         top: 80,
         right: 100,
@@ -41,8 +44,8 @@ d3.csv("corr/corr.csv", function(error, rows) {
       })).values(),
       num = Math.sqrt(data.length),
            color = d3.scaleLinear()
-              .domain([0, 0.3, 1])
-              .range(["#fff", "#f5f107", "#07f53b"]);
+              .domain([0, min, max])
+              .range(["#d40214", "#f0e802", "#1e8a03"]);
 
            var x = d3.scalePoint()
           .range([0, width])
@@ -105,13 +108,13 @@ d3.csv("corr/corr.csv", function(error, rows) {
           return d.value.toFixed(2);
         }
       })
-      .style("fill", "000"/*function(d){
-        if (d.value === 1) {
-          return "#000";
+      .style("fill", function(d) {
+        if (d.value === 0 && d.x != d.y) {
+          return "#fff";
         } else {
-          return color(d.value);
+          return "#000"; //color(d.value);
         }
-      }*/);
+      });
 
       cor.filter(function(d){
         var ypos = domain.indexOf(d.y);
@@ -123,11 +126,11 @@ d3.csv("corr/corr.csv", function(error, rows) {
       })
       .append("circle")
       .attr("r", function(d){
-        return (width / (num * 2)) * (Math.abs(d.value) / 2 );
+        return (width / (num * 2)) * (Math.abs(d.value) /2 );
       })
       .style("fill", function(d){
-        if (d.value === 1) {
-          return "#000";
+        if (d.value === 0) {
+          return "#fff";
         } else {
           return color(d.value);
         }

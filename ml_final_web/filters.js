@@ -3,10 +3,11 @@ var reloading;
 
 function toggleAutoRefresh(cb) {
     //if (cb.checked) {
-        window.location.replace("#autoreload");
-        reloading=setTimeout("window.location.reload();", 1000);
-        //console.log(checked_list());
         localStorage.setItem("clist", JSON.stringify(checked_list()));
+        window.location.replace("#autoreload");
+        reloading=setTimeout("window.location.reload();", 500);
+        //console.log(checked_list());
+        
     //} else {
         
     //    window.location.replace("#");
@@ -26,9 +27,12 @@ d3.json("nodes.json", function(error, data){
     //console.log(names);
     for(var i = 0; i < names.length; i++){
         var item = document.createElement("li");
-        item.innerHTML ="<label><input type='checkbox' onclick='toggleAutoRefresh(this);' class='filt' data-criteria=" + names[i] + " />" + names[i] + "</label>";
+        item.innerHTML ="<label><input type='checkbox' class='filt' data-criteria=" + names[i] + " />" + names[i] + "</label>";
         list.appendChild(item);
     }
+    var go_btn = document.createElement("button");
+    go_btn.innerHTML = "<label onclick='toggleAutoRefresh(this);'> Go </label>";
+    list.appendChild(go_btn);
     div.appendChild(list);
     var clist = JSON.parse(localStorage.getItem("clist"));
     var index;
@@ -53,11 +57,11 @@ function checked_list(){
     var f = document.getElementsByClassName("filt");
     for(var i = 0; i<f.length; i++){
         if(f[i].checked){
-            checked.push(f[i].attributes[3].value);
+            checked.push(f[i].attributes[2].value);
             //console.log(f[i].attributes[3].value);
         }
     }
+    //console.log(checked);
     return checked;
 }
 
-window.onload = configDisp;

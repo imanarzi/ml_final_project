@@ -1,7 +1,7 @@
 function filterSankey(g, clist){
   var fdata = JSON.parse(JSON.stringify(g));
   //console.log(fdata[8]);
-  console.log(fdata);
+  //console.log(fdata);
   var links_to_remove = [];
   for(var i = 0; i < fdata.nodes.length; i++){
     if(!clist.includes(fdata.nodes[i].name)){
@@ -11,7 +11,7 @@ function filterSankey(g, clist){
     }
   }
   var nodez = JSON.parse(JSON.stringify(fdata.nodes));
-  console.log(links_to_remove);
+  //console.log(links_to_remove);
   var linkz = fdata.links;
   for(var i = 0; i < linkz.length; i++){
     if(links_to_remove.includes(linkz[i].source) || links_to_remove.includes(linkz[i].target) 
@@ -21,9 +21,25 @@ function filterSankey(g, clist){
     }
   }
   //localStorage.setItem("linkdata", JSON.stringify(linkz));
-  fdata.links = JSON.parse(JSON.stringify(linkz));
+  //if(linkz.length == 2 && linkz[0].source == linkz[1].target && linkz[1].source == linkz[0].target)
+  //  linkz.splice(1, 1);
+  var nodesdict = {};
+  for(var i = 0; i < nodez.length; i++){
+    //var key = nodez[i].node;
+    nodesdict[nodez[i].node] = i;
+    nodez[i].node = i;
+  }
+  console.log(nodesdict);
+  for(var i = 0; i < linkz.length; i++){
+    linkz[i].source = nodesdict[linkz[i].source];
+    linkz[i].target = nodesdict[linkz[i].target];
+  }
+  console.log(nodez);
+  console.log(linkz);
+  //for(var i = 0; i < nodez.length; i++)
+  //  nodez[i].node = i;
+  fdata.links = linkz;
   fdata.nodes = nodez;
-  //localStorage.setItem("nodedata", JSON.stringify(nodez));
   console.log(fdata);
 
   return fdata;
@@ -32,7 +48,7 @@ function filterSankey(g, clist){
 // set the dimensions and margins of the graph22
 var margin = {top: 10, right: 10, bottom: 10, left: 10},
     width = 1100 - margin.left - margin.right,
-    height = 700 - margin.top - margin.bottom;
+    height = 600 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select("#sankey").append("svg")
@@ -55,22 +71,25 @@ var sankey = d3.sankey()
 
 // load the data
 
-d3.json("sankey/sankey.json", function(error, gdata) {
+d3.json("sankey/sankey2.json", function(error, gdata) {
   var filtered = filterSankey(gdata, checked_list());
   //console.log(filtered);
   var chlist = checked_list();
-  var graph2 = gdata;
-  if(chlist.length != 0){
-    graph2 = JSON.parse(JSON.stringify(filtered));
-  }
+  var graph2 = (chlist.length == 0) ? gdata : filtered;
   
   console.log(graph2);
 
   // Constructs a new Sankey generator with the default settings.
+  try{
   sankey
       .nodes(graph2.nodes)
       .links(graph2.links)
       .layout(1);
+  }
+  catch{
+    document.getElementById("sankeyText").innerHTML = "This collection of nodes contains a cycle.  Please choose another filter combination or see the other diagrams for more.";
+    return;
+  }
 
   // add in the links
   var link = svg.append("g")
@@ -84,7 +103,7 @@ d3.json("sankey/sankey.json", function(error, gdata) {
       .sort(function(a, b) { return b.dy - a.dy; })
     // Add hover text
     .append("title")
-      .text(function(d) { return "Support: " + d.value ; });
+      .text(function(d) { return "Support: " + d.value + "\nLift: " + d.lift + "\nLeverage: " + d.lev; });
 
   // add in the nodes
   var node = svg.append("g")
@@ -105,7 +124,10 @@ d3.json("sankey/sankey.json", function(error, gdata) {
     .append("rect")
       .attr("height", function(d) { dy = d.dy; if(!d.dy) dy = 0; return dy; })
       .attr("width", sankey.nodeWidth())
-      .style("fill", function(d) { return d.color = "blue" })
+      .style("fill", function(d) { 
+        var n = (d.sourceLinks.length + d.targetLinks.length) * 240 / 16;
+        return 'hsl(' + n + ',100%,50%)';
+      })
       .style("stroke", function(d) { return d3.rgb(d.color).darker(2); });
     
 

@@ -8,12 +8,12 @@
             "id": "R0"
         },
         {
-            "name": "budget-resolution",
-            "id": "budget-resolution"
-        },
-        {
             "name": "anti-sat-ban",
             "id": "anti-sat-ban"
+        },
+        {
+            "name": "budget-resolution",
+            "id": "budget-resolution"
         },
         {
             "name": "R1",
@@ -96,12 +96,12 @@
             "id": "R14"
         },
         {
-            "name": "religion-in-schools",
-            "id": "religion-in-schools"
-        },
-        {
             "name": "el-salvador-aid",
             "id": "el-salvador-aid"
+        },
+        {
+            "name": "religion-in-schools",
+            "id": "religion-in-schools"
         },
         {
             "name": "R15",
@@ -130,248 +130,744 @@
         {
             "name": "R19",
             "id": "R19"
+        },
+        {
+            "name": "R20",
+            "id": "R20"
+        },
+        {
+            "name": "superfund-sue",
+            "id": "superfund-sue"
+        },
+        {
+            "name": "R21",
+            "id": "R21"
+        },
+        {
+            "name": "R22",
+            "id": "R22"
+        },
+        {
+            "name": "R23",
+            "id": "R23"
+        },
+        {
+            "name": "no-handicapped-infants",
+            "id": "no-handicapped-infants"
+        },
+        {
+            "name": "R24",
+            "id": "R24"
+        },
+        {
+            "name": "R25",
+            "id": "R25"
+        },
+        {
+            "name": "no-duty-free-exports",
+            "id": "no-duty-free-exports"
+        },
+        {
+            "name": "R26",
+            "id": "R26"
+        },
+        {
+            "name": "R27",
+            "id": "R27"
+        },
+        {
+            "name": "R28",
+            "id": "R28"
+        },
+        {
+            "name": "R29",
+            "id": "R29"
+        },
+        {
+            "name": "R30",
+            "id": "R30"
+        },
+        {
+            "name": "R31",
+            "id": "R31"
+        },
+        {
+            "name": "R32",
+            "id": "R32"
+        },
+        {
+            "name": "R33",
+            "id": "R33"
+        },
+        {
+            "name": "R34",
+            "id": "R34"
+        },
+        {
+            "name": "R35",
+            "id": "R35"
+        },
+        {
+            "name": "R36",
+            "id": "R36"
+        },
+        {
+            "name": "R37",
+            "id": "R37"
+        },
+        {
+            "name": "R38",
+            "id": "R38"
+        },
+        {
+            "name": "R39",
+            "id": "R39"
+        },
+        {
+            "name": "R40",
+            "id": "R40"
+        },
+        {
+            "name": "R41",
+            "id": "R41"
+        },
+        {
+            "name": "R42",
+            "id": "R42"
+        },
+        {
+            "name": "R43",
+            "id": "R43"
+        },
+        {
+            "name": "R44",
+            "id": "R44"
+        },
+        {
+            "name": "R45",
+            "id": "R45"
+        },
+        {
+            "name": "R46",
+            "id": "R46"
+        },
+        {
+            "name": "R47",
+            "id": "R47"
+        },
+        {
+            "name": "R48",
+            "id": "R48"
+        },
+        {
+            "name": "R49",
+            "id": "R49"
+        },
+        {
+            "name": "no-superfund-sue",
+            "id": "no-superfund-sue"
         }
     ],
     "links": [
         {
-            "color": 0.38734905831306976,
+            "color": 0.6454484085299173,
             "weight": 2,
             "source": "R0",
-            "target": "anti-sat-ban"
+            "target": "budget-resolution"
         },
         {
-            "color": 0.38734905831306976,
+            "color": 0.6454484085299173,
             "weight": 2,
-            "source": "budget-resolution",
+            "source": "anti-sat-ban",
             "target": "R0"
         },
         {
-            "color": 0.19884726549723508,
+            "color": 0.7418718975726907,
+            "weight": 2,
+            "source": "anti-sat-ban",
+            "target": "R27"
+        },
+        {
+            "color": 0.5146416551764565,
+            "weight": 2,
+            "source": "anti-sat-ban",
+            "target": "R29"
+        },
+        {
+            "color": 0.625876393454175,
+            "weight": 2,
+            "source": "anti-sat-ban",
+            "target": "R31"
+        },
+        {
+            "color": 0.21795197246803577,
+            "weight": 2,
+            "source": "anti-sat-ban",
+            "target": "R33"
+        },
+        {
+            "color": 0.052862551139945535,
+            "weight": 2,
+            "source": "anti-sat-ban",
+            "target": "R35"
+        },
+        {
+            "color": 0.8559375903851103,
+            "weight": 2,
+            "source": "anti-sat-ban",
+            "target": "R37"
+        },
+        {
+            "color": 0.4293188366814378,
+            "weight": 2,
+            "source": "budget-resolution",
+            "target": "R1"
+        },
+        {
+            "color": 0.45908136317166426,
             "weight": 2,
             "source": "budget-resolution",
             "target": "R2"
         },
         {
-            "color": 0.3627873666005027,
+            "color": 0.35477791013219373,
             "weight": 2,
             "source": "budget-resolution",
-            "target": "R4"
+            "target": "R5"
         },
         {
-            "color": 0.8575409707605782,
+            "color": 0.6238825204436811,
             "weight": 2,
             "source": "budget-resolution",
             "target": "R6"
         },
         {
-            "color": 0.3059563864772077,
+            "color": 0.7545049855450161,
             "weight": 2,
             "source": "budget-resolution",
-            "target": "R8"
+            "target": "R9"
         },
         {
-            "color": 0.285666151439284,
+            "color": 0.9520502982306474,
             "weight": 2,
             "source": "budget-resolution",
             "target": "R10"
         },
         {
-            "color": 0.7638432306038914,
+            "color": 0.2914458805762924,
             "weight": 2,
             "source": "budget-resolution",
-            "target": "R12"
+            "target": "R13"
         },
         {
-            "color": 0.80432084727402,
-            "weight": 2,
-            "source": "anti-sat-ban",
-            "target": "R1"
-        },
-        {
-            "color": 0.80432084727402,
+            "color": 0.4293188366814378,
             "weight": 2,
             "source": "R1",
-            "target": "budget-resolution"
+            "target": "anti-sat-ban"
         },
         {
-            "color": 0.19884726549723508,
+            "color": 0.45908136317166426,
             "weight": 2,
             "source": "R2",
             "target": "nicaraguan-contras"
         },
         {
-            "color": 0.5959869536432234,
+            "color": 0.26830162168048166,
             "weight": 2,
             "source": "nicaraguan-contras",
             "target": "R3"
         },
         {
-            "color": 0.5959869536432234,
+            "color": 0.9092691036169988,
+            "weight": 2,
+            "source": "nicaraguan-contras",
+            "target": "R28"
+        },
+        {
+            "color": 0.8598622590142152,
+            "weight": 2,
+            "source": "nicaraguan-contras",
+            "target": "R40"
+        },
+        {
+            "color": 0.4113676884446613,
+            "weight": 2,
+            "source": "nicaraguan-contras",
+            "target": "R42"
+        },
+        {
+            "color": 0.18969337554778687,
+            "weight": 2,
+            "source": "nicaraguan-contras",
+            "target": "R44"
+        },
+        {
+            "color": 0.8358546559112636,
+            "weight": 2,
+            "source": "nicaraguan-contras",
+            "target": "R46"
+        },
+        {
+            "color": 0.3801224565759205,
+            "weight": 2,
+            "source": "nicaraguan-contras",
+            "target": "R48"
+        },
+        {
+            "color": 0.26830162168048166,
             "weight": 2,
             "source": "R3",
             "target": "budget-resolution"
         },
         {
-            "color": 0.3627873666005027,
+            "color": 0.04709712714026715,
             "weight": 2,
             "source": "R4",
-            "target": "mx-missile"
-        },
-        {
-            "color": 0.5444803688315702,
-            "weight": 2,
-            "source": "mx-missile",
-            "target": "R5"
-        },
-        {
-            "color": 0.5444803688315702,
-            "weight": 2,
-            "source": "R5",
             "target": "budget-resolution"
         },
         {
-            "color": 0.8575409707605782,
+            "color": 0.04709712714026715,
+            "weight": 2,
+            "source": "mx-missile",
+            "target": "R4"
+        },
+        {
+            "color": 0.8913079849009844,
+            "weight": 2,
+            "source": "mx-missile",
+            "target": "R30"
+        },
+        {
+            "color": 0.9391121089030608,
+            "weight": 2,
+            "source": "mx-missile",
+            "target": "R39"
+        },
+        {
+            "color": 0.35477791013219373,
+            "weight": 2,
+            "source": "R5",
+            "target": "mx-missile"
+        },
+        {
+            "color": 0.6238825204436811,
             "weight": 2,
             "source": "R6",
             "target": "democrat"
         },
         {
-            "color": 0.8471672915412483,
+            "color": 0.5070872771561126,
             "weight": 2,
             "source": "democrat",
             "target": "R7"
         },
         {
-            "color": 0.8471672915412483,
+            "color": 0.008174537966702755,
+            "weight": 2,
+            "source": "democrat",
+            "target": "R32"
+        },
+        {
+            "color": 0.8221348130216999,
+            "weight": 2,
+            "source": "democrat",
+            "target": "R41"
+        },
+        {
+            "color": 0.5070872771561126,
             "weight": 2,
             "source": "R7",
             "target": "budget-resolution"
         },
         {
-            "color": 0.3059563864772077,
+            "color": 0.966637961644578,
             "weight": 2,
             "source": "R8",
-            "target": "no-physician-fee-freeze"
-        },
-        {
-            "color": 0.43236494014571913,
-            "weight": 2,
-            "source": "no-physician-fee-freeze",
-            "target": "R9"
-        },
-        {
-            "color": 0.43236494014571913,
-            "weight": 2,
-            "source": "R9",
             "target": "budget-resolution"
         },
         {
-            "color": 0.285666151439284,
+            "color": 0.966637961644578,
+            "weight": 2,
+            "source": "no-physician-fee-freeze",
+            "target": "R8"
+        },
+        {
+            "color": 0.2022367814293553,
+            "weight": 2,
+            "source": "no-physician-fee-freeze",
+            "target": "R34"
+        },
+        {
+            "color": 0.5973681168265692,
+            "weight": 2,
+            "source": "no-physician-fee-freeze",
+            "target": "R43"
+        },
+        {
+            "color": 0.7545049855450161,
+            "weight": 2,
+            "source": "R9",
+            "target": "no-physician-fee-freeze"
+        },
+        {
+            "color": 0.9520502982306474,
             "weight": 2,
             "source": "R10",
             "target": "no-el-salvador-aid"
         },
         {
-            "color": 0.6520481257541458,
+            "color": 0.9194434117541849,
             "weight": 2,
             "source": "no-el-salvador-aid",
             "target": "R11"
         },
         {
-            "color": 0.6520481257541458,
+            "color": 0.268404493500084,
+            "weight": 2,
+            "source": "no-el-salvador-aid",
+            "target": "R36"
+        },
+        {
+            "color": 0.04795122721759615,
+            "weight": 2,
+            "source": "no-el-salvador-aid",
+            "target": "R45"
+        },
+        {
+            "color": 0.9194434117541849,
             "weight": 2,
             "source": "R11",
             "target": "budget-resolution"
         },
         {
-            "color": 0.7638432306038914,
+            "color": 0.5960119042305586,
             "weight": 2,
             "source": "R12",
-            "target": "no-education-spending"
-        },
-        {
-            "color": 0.747880117175698,
-            "weight": 2,
-            "source": "no-education-spending",
-            "target": "R13"
-        },
-        {
-            "color": 0.747880117175698,
-            "weight": 2,
-            "source": "R13",
             "target": "budget-resolution"
         },
         {
-            "color": 0.589471322287202,
+            "color": 0.5960119042305586,
             "weight": 2,
-            "source": "R14",
-            "target": "el-salvador-aid"
+            "source": "no-education-spending",
+            "target": "R12"
         },
         {
-            "color": 0.589471322287202,
+            "color": 0.2681526709414781,
             "weight": 2,
-            "source": "religion-in-schools",
+            "source": "no-education-spending",
+            "target": "R38"
+        },
+        {
+            "color": 0.6956569069701372,
+            "weight": 2,
+            "source": "no-education-spending",
+            "target": "R47"
+        },
+        {
+            "color": 0.2914458805762924,
+            "weight": 2,
+            "source": "R13",
+            "target": "no-education-spending"
+        },
+        {
+            "color": 0.5735741150004393,
+            "weight": 2,
+            "source": "R14",
+            "target": "religion-in-schools"
+        },
+        {
+            "color": 0.5735741150004393,
+            "weight": 2,
+            "source": "el-salvador-aid",
             "target": "R14"
         },
         {
-            "color": 0.8740829322849509,
-            "weight": 2,
-            "source": "el-salvador-aid",
-            "target": "R15"
-        },
-        {
-            "color": 0.40594909284918457,
+            "color": 0.8769909492059077,
             "weight": 2,
             "source": "el-salvador-aid",
             "target": "R17"
         },
         {
-            "color": 0.261386547727086,
+            "color": 0.5380004919445636,
             "weight": 2,
             "source": "el-salvador-aid",
             "target": "R19"
         },
         {
-            "color": 0.8740829322849509,
+            "color": 0.7702757000900664,
             "weight": 2,
-            "source": "R15",
-            "target": "religion-in-schools"
+            "source": "religion-in-schools",
+            "target": "R15"
         },
         {
-            "color": 0.47765933509352554,
+            "color": 0.18750037735071368,
+            "weight": 2,
+            "source": "religion-in-schools",
+            "target": "R22"
+        },
+        {
+            "color": 0.1087275928953475,
+            "weight": 2,
+            "source": "religion-in-schools",
+            "target": "R26"
+        },
+        {
+            "color": 0.7702757000900664,
+            "weight": 2,
+            "source": "R15",
+            "target": "el-salvador-aid"
+        },
+        {
+            "color": 0.2823835603602428,
             "weight": 2,
             "source": "R16",
             "target": "el-salvador-aid"
         },
         {
-            "color": 0.47765933509352554,
+            "color": 0.2823835603602428,
             "weight": 2,
             "source": "crime",
             "target": "R16"
         },
         {
-            "color": 0.40594909284918457,
+            "color": 0.26154303679246194,
+            "weight": 2,
+            "source": "crime",
+            "target": "R21"
+        },
+        {
+            "color": 0.8769909492059077,
             "weight": 2,
             "source": "R17",
             "target": "crime"
         },
         {
-            "color": 0.7118138686472947,
+            "color": 0.6919662642987033,
             "weight": 2,
             "source": "R18",
             "target": "el-salvador-aid"
         },
         {
-            "color": 0.7118138686472947,
+            "color": 0.6919662642987033,
             "weight": 2,
             "source": "no-mx-missile",
             "target": "R18"
         },
         {
-            "color": 0.261386547727086,
+            "color": 0.039080443829496825,
+            "weight": 2,
+            "source": "no-mx-missile",
+            "target": "R24"
+        },
+        {
+            "color": 0.5380004919445636,
             "weight": 2,
             "source": "R19",
             "target": "no-mx-missile"
+        },
+        {
+            "color": 0.6444245433085554,
+            "weight": 2,
+            "source": "R20",
+            "target": "religion-in-schools"
+        },
+        {
+            "color": 0.6444245433085554,
+            "weight": 2,
+            "source": "superfund-sue",
+            "target": "R20"
+        },
+        {
+            "color": 0.26154303679246194,
+            "weight": 2,
+            "source": "R21",
+            "target": "religion-in-schools"
+        },
+        {
+            "color": 0.18750037735071368,
+            "weight": 2,
+            "source": "R22",
+            "target": "crime"
+        },
+        {
+            "color": 0.44223723058253317,
+            "weight": 2,
+            "source": "R23",
+            "target": "religion-in-schools"
+        },
+        {
+            "color": 0.44223723058253317,
+            "weight": 2,
+            "source": "no-handicapped-infants",
+            "target": "R23"
+        },
+        {
+            "color": 0.039080443829496825,
+            "weight": 2,
+            "source": "R24",
+            "target": "religion-in-schools"
+        },
+        {
+            "color": 0.18770425602291352,
+            "weight": 2,
+            "source": "R25",
+            "target": "religion-in-schools"
+        },
+        {
+            "color": 0.18770425602291352,
+            "weight": 2,
+            "source": "no-duty-free-exports",
+            "target": "R25"
+        },
+        {
+            "color": 0.1087275928953475,
+            "weight": 2,
+            "source": "R26",
+            "target": "no-duty-free-exports"
+        },
+        {
+            "color": 0.7418718975726907,
+            "weight": 2,
+            "source": "R27",
+            "target": "nicaraguan-contras"
+        },
+        {
+            "color": 0.9092691036169988,
+            "weight": 2,
+            "source": "R28",
+            "target": "anti-sat-ban"
+        },
+        {
+            "color": 0.5146416551764565,
+            "weight": 2,
+            "source": "R29",
+            "target": "mx-missile"
+        },
+        {
+            "color": 0.8913079849009844,
+            "weight": 2,
+            "source": "R30",
+            "target": "anti-sat-ban"
+        },
+        {
+            "color": 0.625876393454175,
+            "weight": 2,
+            "source": "R31",
+            "target": "democrat"
+        },
+        {
+            "color": 0.008174537966702755,
+            "weight": 2,
+            "source": "R32",
+            "target": "anti-sat-ban"
+        },
+        {
+            "color": 0.21795197246803577,
+            "weight": 2,
+            "source": "R33",
+            "target": "no-physician-fee-freeze"
+        },
+        {
+            "color": 0.2022367814293553,
+            "weight": 2,
+            "source": "R34",
+            "target": "anti-sat-ban"
+        },
+        {
+            "color": 0.052862551139945535,
+            "weight": 2,
+            "source": "R35",
+            "target": "no-el-salvador-aid"
+        },
+        {
+            "color": 0.268404493500084,
+            "weight": 2,
+            "source": "R36",
+            "target": "anti-sat-ban"
+        },
+        {
+            "color": 0.8559375903851103,
+            "weight": 2,
+            "source": "R37",
+            "target": "no-education-spending"
+        },
+        {
+            "color": 0.2681526709414781,
+            "weight": 2,
+            "source": "R38",
+            "target": "anti-sat-ban"
+        },
+        {
+            "color": 0.9391121089030608,
+            "weight": 2,
+            "source": "R39",
+            "target": "nicaraguan-contras"
+        },
+        {
+            "color": 0.8598622590142152,
+            "weight": 2,
+            "source": "R40",
+            "target": "mx-missile"
+        },
+        {
+            "color": 0.8221348130216999,
+            "weight": 2,
+            "source": "R41",
+            "target": "nicaraguan-contras"
+        },
+        {
+            "color": 0.4113676884446613,
+            "weight": 2,
+            "source": "R42",
+            "target": "democrat"
+        },
+        {
+            "color": 0.5973681168265692,
+            "weight": 2,
+            "source": "R43",
+            "target": "nicaraguan-contras"
+        },
+        {
+            "color": 0.18969337554778687,
+            "weight": 2,
+            "source": "R44",
+            "target": "no-physician-fee-freeze"
+        },
+        {
+            "color": 0.04795122721759615,
+            "weight": 2,
+            "source": "R45",
+            "target": "nicaraguan-contras"
+        },
+        {
+            "color": 0.8358546559112636,
+            "weight": 2,
+            "source": "R46",
+            "target": "no-el-salvador-aid"
+        },
+        {
+            "color": 0.6956569069701372,
+            "weight": 2,
+            "source": "R47",
+            "target": "nicaraguan-contras"
+        },
+        {
+            "color": 0.3801224565759205,
+            "weight": 2,
+            "source": "R48",
+            "target": "no-education-spending"
+        },
+        {
+            "color": 0.10625548432455201,
+            "weight": 2,
+            "source": "R49",
+            "target": "nicaraguan-contras"
+        },
+        {
+            "color": 0.10625548432455201,
+            "weight": 2,
+            "source": "no-superfund-sue",
+            "target": "R49"
         }
     ]
 }

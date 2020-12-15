@@ -5,9 +5,9 @@
     <link type="text/css" rel="stylesheet" href="styles.css"/>
     
   </head>
-  <body onload="configDisp">
+  <body onload="">
     <h1>Voting Records Association Rules</h1>
-    <h3>Interactive Visualization</h3>
+    <h3>Interactive Visualizations</h3>
     <div class="buttons">
         <button onclick="showForce()">Force Diagram</button>
         <button onclick="showCorr()">Correlogram</button>
@@ -27,14 +27,36 @@
         </p>
     </div>
 
-    <div id="sankey" class="sankey" style="display:none;"><p>
-        Hover over link to see support
-    </p></div>
+    <div id="sankey" class="sankey" style="display:none;">
+        <p id="sankeyText">
+            Hover over link to see support, lift, and leverage
+        </p>
+    </div>
     
     <div id="filter">
         <p><strong>Filter:</strong></p>
     </div>
-
+    <div class="analysis">
+        <p><strong>TIPS ON MAKING USE OF THESE DIAGRAMS:</strong> </p>
+        <p>
+            All three diagrams are based off of 50 rules produced by the algorithms in the Jupyter Notebook, all with confidence >0.7 and support >0.4.
+            Using these, we can figure out what bills are voted on by the same person and just how much these correlate.
+            The Force diagram shows the direction of rules.  Many rules go in both directions, but some only exist in one way (i.e. 
+            no superfund right to sue --> nicaraguan contras).  While support, lift, and leverage are the same both ways, confidence and conviction are not.
+            <br><br>
+            The Correlogram is useful for seeing how many other items one item correlates with, bidirectional or not.  
+            Given any item in the diagonal of the diagram, you can count how many other items (for and against votes) it is correlated with 
+            by counting the dots in the same row and column.  The color of these dots are determined by the support, the 
+             values of which are reflected across the diagonal, in the lower triangle of the diagram.
+            The darker the color, the higher the support. For example, we can see that "democrat" has is correlated with 3 other items with
+             relatively high values for support.  On the other hand, "anti-satellite-ban" is correlated with 7 other items, with widely varying values for 
+            support.
+            <br><br>
+            The Sankey diagram is again a non-directed way of showing how items are correlated.  Sort of like the Force diagram, this diagram emphasizes
+             which items have more correlations by the color of each rectangular node.  Green means many correlations while red means less.  Also, by hovering 
+             over the links of the diagram, the undirected metrics (support, lift, and leverage) become visible.
+        </p>
+    </div>
     <footer>
         <hr>
         &copy; Copyright 2020 Iman Anwarzai
@@ -50,6 +72,7 @@
             items = document.getElementsByClassName("fdiv");
             for (var i=0; i < items.length; i++) items[i].style.display = "block";
             localStorage.setItem("currDisp", 0);
+            console.log("fffore");
 
         }
         function showCorr(){
@@ -60,6 +83,7 @@
             items = document.getElementsByClassName("fdiv");
             for (var i=0; i < items.length; i++) items[i].style.display = "none";
             localStorage.setItem("currDisp", 1);
+            console.log("sccce");
 
         }
         function showSankey(){
@@ -70,17 +94,19 @@
             items = document.getElementsByClassName("fdiv");
             for (var i=0; i < items.length; i++) items[i].style.display = "none";
             localStorage.setItem("currDisp", 2);
+            console.log("sanke");
         }
         function configDisp(){
             var currDisp = localStorage.getItem("currDisp")
-            if(!currDisp)
-                currDisp = 0;
+            console.log(currDisp);
             
-            switch(currDisp){
-                case 0: showForce();
-                case 1: showCorr();
-                case 2: showSankey();
-            }
+            if(currDisp == 1)
+                showCorr(); 
+            else if(currDisp == 2)
+                showSankey(); 
+            else
+                showForce(); 
+            
         }
     </script>
     <script type="text/javascript" src="filters.js"></script>
@@ -88,5 +114,8 @@
     <script type="text/javascript" src="corr/corr.js"></script>
     <script type="text/javascript" src="sankey/sankey.js"></script>
     <script type="text/javascript" src="sankey/script.js"></script> 
+    <script>
+        configDisp();
+    </script>
   </body>
 </html>
